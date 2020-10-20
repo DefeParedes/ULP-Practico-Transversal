@@ -86,7 +86,7 @@ public class AlumnoData {
 
     public void actualizarAlumno(Alumno alumno){
         try{
-            String sql = ("UPDATE alumno SET nombre_completo=?, nacimiento_alumno=?, activo=? WHERE id=?");
+            String sql = ("UPDATE alumno SET nombre_completo=?, nacimiento_alumno=?, activo=? WHERE id_alumno=?");
             
             PreparedStatement ps = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, alumno.getNombre_completo());
