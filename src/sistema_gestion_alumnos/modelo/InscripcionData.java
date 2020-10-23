@@ -84,7 +84,7 @@ public class InscripcionData {
 
     public void actualizarInscripcion(Inscripcion inscripcion){
         try{
-            String sql = ("UPDATE inscripcion SET _id_alumno=?, id_materia=?, nota=? WHERE id_inscripcion=?");
+            String sql = ("UPDATE inscripcion SET id_alumno=?, id_materia=?, nota=? WHERE id_inscripcion=?");
             
             PreparedStatement ps = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, inscripcion.getId_alumno());
